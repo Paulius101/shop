@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Item} from "../../models/item";
+import {DiscountPipe} from "../../pipes/discount.pipe";
 
 @Component({
   selector: 'app-item-list',
@@ -10,7 +11,9 @@ export class ItemListComponent implements OnInit {
   public items: Item[] = [];
   public cart: number[] = [];
 
-  constructor() {
+  public saleEndDate: Date = new Date("2021-12-23");
+
+  constructor(private discountPipe: DiscountPipe) {
   }
 
   ngOnInit(): void {
@@ -20,7 +23,11 @@ export class ItemListComponent implements OnInit {
   }
 
   public addToCart(itemId: number) {
-    this.cart.push(itemId);
+    // [] <--- Taip susikuria naujas masyvas
+    // [...kitasMasyvas] <--- Taip į masyvą "pažeriami" kito masyvo elementai
+    // [1, 2, 3]
+    // [...kitasMasyvas, 1]
+    this.cart = [...this.cart, itemId];
   }
 
   public removeFromCart(itemId: number) {
@@ -28,5 +35,13 @@ export class ItemListComponent implements OnInit {
 
     if (itemIndex !== -1)
       this.cart.splice(itemIndex, 1);
+
+    this.cart = [...this.cart]; // Nedaryti to namuose!
+  }
+
+  public generateCSV(): void {
+    this.items.forEach((item) => {
+      const finalPrice = this.discountPipe.transform(item.price, item.discount);
+    });
   }
 }
