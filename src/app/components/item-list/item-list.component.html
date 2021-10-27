@@ -2,21 +2,9 @@
 Išpardavimas baigsis: {{saleEndDate | date : "YYYY-MM-dd"}}
 
 <ng-container *ngFor="let item of itemService.items">
-<<<<<<< HEAD
   <app-item [item]="item" (onItemAdded)="addToCart(item.id)" (onItemRemoved)="removeFromCart(item.id)"></app-item>
-=======
-  <app-item
-    [item]="item"
-    (onItemAdded)="addToCart(item.id)"
-    (onItemRemoved)="removeFromCart(item.id)"
-  ></app-item>
->>>>>>> c70a18d58b6c6e6b304ddae9bc71601e6e357628
 </ng-container>
 
 <button (click)="generateCSV()">Generuoti CSV</button>
 
-<<<<<<< HEAD
 <app-cart></app-cart>
-=======
-<app-cart></app-cart>
->>>>>>> c70a18d58b6c6e6b304ddae9bc71601e6e357628
