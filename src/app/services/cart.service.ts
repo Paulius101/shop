@@ -8,4 +8,8 @@ export class CartService {
 
   constructor() {
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c70a18d58b6c6e6b304ddae9bc71601e6e357628

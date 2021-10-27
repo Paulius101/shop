@@ -13,4 +13,8 @@ export class ItemService {
     this.items.push(new Item(419, "SEL Albumas", 15, 50));
     this.items.push(new Item(68, "Pikaso Albumas", 35, 70));
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c70a18d58b6c6e6b304ddae9bc71601e6e357628

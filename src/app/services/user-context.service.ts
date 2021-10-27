@@ -26,4 +26,8 @@ export class UserContextService {
     localStorage.setItem("userDetails", JSON.stringify(newUserDetails));
     this._userDetails = newUserDetails;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c70a18d58b6c6e6b304ddae9bc71601e6e357628
