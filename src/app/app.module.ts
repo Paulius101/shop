@@ -14,12 +14,11 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { AddItemFormComponent } from './components/add-item-form/add-item-form.component';
 import {FormsModule} from "@angular/forms";
 import { MessagesComponent } from './components/messages/messages.component';
-import { routesComponent } from './app-routing.module';
-
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
-      AppComponent,
+    AppComponent,
     ItemListComponent,
     ItemComponent,
     CartComponent,
@@ -29,13 +28,13 @@ import { routesComponent } from './app-routing.module';
     PageNotFoundComponent,
     UserDetailsComponent,
     AddItemFormComponent,
-    MessagesComponent,
-    routesComponent
+    MessagesComponent
   ],
   imports: [
-      BrowserModule,
+    BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     DiscountPipe

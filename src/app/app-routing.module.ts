@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ItemListComponent} from "./components/item-list/item-list.component";
@@ -49,4 +48,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-export const routesComponent  = [PageNotFoundComponent, UserDetailsComponent, CartComponent,ItemListComponent]
