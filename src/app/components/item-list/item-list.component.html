@@ -7,7 +7,9 @@ Išpardavimas baigsis: {{saleEndDate | date : "YYYY-MM-dd"}}
   <app-item [item]="item" (onItemAdded)="addToCart(item.id)" (onItemRemoved)="removeFromCart(item.id)"></app-item>
 </ng-container>
 
-<button (click)="generateCSV()">Generuoti CSV</button>
+<br>
+
+<button (click)="accessService.logout()">Logout</button> <br>
 
 <app-cart></app-cart>
 

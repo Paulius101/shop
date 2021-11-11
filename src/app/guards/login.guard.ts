@@ -14,6 +14,10 @@ export class LoginGuard implements CanActivate {
               private accessService: AccessService) {
   }
 
+  // Unit
+  // Integration
+  // E2E - End 2 End
+
   canActivate(): boolean {
     if (this.accessService.isLoggedIn)
       return true;
